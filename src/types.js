@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 
 // Cards are strings which should match /^[2-9TJQKA][hcds]$/
-const cardType = PropTypes.string;
+const cardRegex = /^[2-9TJQKA][hcds]$/;
+export const cardType = cardRegex.test('') ? PropTypes.instanceOf(RegExp) : PropTypes.string;
 
-const playerShape = PropTypes.shape({
+export const playerShape = PropTypes.shape({
   seatId: PropTypes.number.isRequired,
   bet: PropTypes.number.isRequired,
   cards: PropTypes.arrayOf(cardType).isRequired,
@@ -17,12 +18,12 @@ export const seatProps = {
 };
 export const seatShape = PropTypes.shape(seatProps);
 
-const potShape = PropTypes.shape({
+export const potShape = PropTypes.shape({
   chips: PropTypes.number.isRequired,
   seatIds: PropTypes.arrayOf(PropTypes.number).isRequired,
 });
 
-const handShape = PropTypes.shape({
+export const handShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   communityCards: PropTypes.arrayOf(cardType).isRequired,
   players: PropTypes.arrayOf(playerShape).isRequired,
