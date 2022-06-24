@@ -8,7 +8,7 @@ const Chips = ({ amount }) => {
 
   return (
     <div className="Chips">
-      {amount}
+      {amount.toLocaleString('en-US')}
     </div>
   );
 }
