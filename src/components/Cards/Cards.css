@@ -1,4 +1,4 @@
-.Seat .Cards {
+.Two-cards .Seat .Cards {
   position: absolute;
   top: -5px;
   left: 75px;
@@ -10,4 +10,22 @@
   position: absolute;
   left: -185px;
   top: -5px;
+}
+
+.Four-cards .Seat .Cards {
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  width: 300px;
+  transform: translate(-50%, 0);
+}
+
+/* adjusting left seat */
+.Four-cards .Seat-1 .Cards {
+  transform: translate(-60%, 0);
+}
+
+/* adjusting right seat */
+.Four-cards .Seat-4 .Cards {
+  transform: translate(-40%, 0);
 }
