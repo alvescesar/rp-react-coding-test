@@ -22,9 +22,16 @@
   line-height: 40px;
 }
 
+/* for 6-player game, utilize left (Seat-4) and right (Seat-1) seats */
 .Seats-6 .Seat-0 { left: 200px; top: -250px; }
 .Seats-6 .Seat-1 { left: 470px; top: 50px; }
 .Seats-6 .Seat-2 { left: 200px; top: 300px; }
 .Seats-6 .Seat-3 { left: -200px; top: 300px; }
 .Seats-6 .Seat-4 { left: -470px; top: 50px; }
 .Seats-6 .Seat-5 { left: -200px; top: -250px; }
+
+/* for 4-player game, eliminate left and right seats */
+.Seats-4 .Seat-0 { left: 200px; top: -250px; }
+.Seats-4 .Seat-1 { left: 200px; top: 300px; }
+.Seats-4 .Seat-2 { left: -200px; top: 300px; }
+.Seats-4 .Seat-3 { left: -200px; top: -250px; }
